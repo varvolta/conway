@@ -1,0 +1,41 @@
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.controls .button {
+    background-color: var(--color-accent);
+    color: var(--color-text);
+    border-radius: 1000px;
+    border: none;
+    display: flex;
+    align-items: center;
+    padding: 12px 12px;
+    gap: 5px;
+    font-size: 20px;
+    transition: box-shadow 150ms ease-in-out, opacity 150ms ease-in-out;
+}
+
+.controls .button:active {
+    opacity: 0.75;
+}
+
+.controls .button:hover {
+    box-shadow: 0 0 20px var(--color-accent-shadow);
+}
+
+.controls .svg {
+    filter: invert();
+}
+
+.controls .svg.play {
+    margin-right: -2px;
+    margin-left: 2px;
+}
+
+.controls .svg.pause {
+    margin-right: 0;
+    margin-left: 0;
+}

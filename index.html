@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conway's Game Of Life</title>
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+    <div class="root">
+        <div id="canvases" class="canvases pause"></div>
+        <div class="controls">
+            <button id="button-play-pause" class="button">
+                <img width="20" height="20" class="svg play" src="assets/icons/play.svg" alt="play"/>
+            </button>
+            <button id="button-next" class="button">
+                <img width="20" height="20" class="svg" src="assets/icons/next.svg" alt="next"/>
+            </button>
+            <button id="button-restart" class="button">
+                <img width="20" height="20" class="svg" src="assets/icons/restart.svg" alt="restart"/>
+            </button>
+        </div>
+        <div id="splash" class="splash">
+            <div class="title accent">CONWAY'S</div>
+            <div class="title">GAME</div>
+            <div class="title">OF LIFE</div>
+            <div class="menu">
+                <div id="button-start" class="start">Start</div>
+                <div id="button-rules" class="rules">Rules</div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="scripts/main.js"></script>
+</body>
+</html>
