@@ -18,13 +18,27 @@
     display: flex;
     flex-direction: column;
     background-color: var(--color-dim-light);
-    padding: 20px;
     border-radius: 10px;
-    gap: 10px;
+    border: 1px solid var(--color-accent);
+    box-shadow: 0 0 50px var(--color-accent-shadow);
+    overflow: hidden;
+}
+
+.rules .alert .line {
+    height: 1px;
+    background-color: var(--color-dim-light);
 }
 
 .rules .alert .rule {
-    font-size: 20px;
+    line-height: 30px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    padding: 20px 30px;
+}
+
+.rules .alert .rule:hover {
+    background-color: var(--color-dim-light);
 }
 
 .rules .alert .close {
@@ -32,20 +46,19 @@
     background-color: transparent;
     border: none;
     filter: invert();
-    top: 10px;
-    right: 10px;
+    top: 0;
+    right: 0;
     padding: 0;
     cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .rules .alert .close:active {
     opacity: 0.75;
-}
-
-.rules .alert .rule {
-    display: flex;
-    gap: 20px;
-    align-items: center;
 }
 
 .rules .alert .rule .number {
@@ -57,5 +70,3 @@
     align-items: center;
     justify-content: center;
 }
-
-.rules .alert .rule .title {}

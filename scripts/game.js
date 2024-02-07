@@ -58,12 +58,9 @@ const drawWireframe = () => {
 
     for (let column = 0; column < columnsCount; column++) {
         const moveToX = diffX + column * CELL_SIZE
-        // const index = Math.ceil(((x + width) * column) / CELL_SIZE)
-        // console.log(index)
         contextWireframe.moveTo(moveToX, 0)
         contextWireframe.lineTo(moveToX, height)
     }
-    console.log(123)
 
     for (let row = 0; row < rowsCount; row++) {
         const moveToY = diffY + row * CELL_SIZE

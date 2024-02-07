@@ -1,24 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conway's Game Of Life</title>
     <link rel="stylesheet" href="styles/index.css">
 </head>
+
 <body>
     <div class="root">
         <div id="canvases" class="canvases pause"></div>
         <div class="controls">
-            <button id="button-play-pause" class="button">
-                <img width="20" height="20" class="svg play" src="assets/icons/play.svg" alt="play"/>
-            </button>
-            <button id="button-next" class="button">
-                <img width="20" height="20" class="svg" src="assets/icons/next.svg" alt="next"/>
-            </button>
-            <button id="button-restart" class="button">
-                <img width="20" height="20" class="svg" src="assets/icons/restart.svg" alt="restart"/>
-            </button>
+            <div class="fill left">
+                <button id="button-menu" class="button">
+                    <img width="20" height="20" class="svg" src="assets/icons/menu.svg" alt="play" />
+                </button>
+            </div>
+            <div class="fill">
+                <button id="button-next" class="button">
+                    <img width="20" height="20" class="svg" src="assets/icons/next.svg" alt="next" />
+                </button>
+                <button id="button-play-pause" class="button accent big">
+                    <img width="20" height="20" class="svg play" src="assets/icons/play.svg" alt="play" />
+                </button>
+                <button id="button-restart" class="button secondary">
+                    <img width="20" height="20" class="svg" src="assets/icons/restart.svg" alt="restart" />
+                </button>
+            </div>
+            <div class="fill right">
+                <div id="slider" class="slider">
+                    <div class="title">
+                        X1
+                    </div>
+                    <div class="value"></div>
+                </div>
+            </div>
         </div>
         <div id="splash" class="splash">
             <div class="title accent">CONWAY'S</div>
@@ -33,31 +50,26 @@
         <div id="rules" class="rules hidden">
             <div class="alert">
                 <button id="button-close-rules" class="close">
-                    <img width="20" height="20" class="svg" src="assets/icons/close.svg" alt="close rules"/>
+                    <img width="20" height="20" class="svg" src="assets/icons/close.svg" alt="close rules" />
                 </button>
                 <div class="rule">
                     <div class="number">1</div>
-                    <div class="title">
-                        Any live cell with fewer than two live neighbors dies, as if caused by under-population.
-                    </div>
+                    Any live cell with fewer than two live neighbors dies, as if caused by under-population.
                 </div>
+                <div class="line"></div>
                 <div class="rule">
                     <div class="number">2</div>
-                    <div class="title">
-                        Any live cell with two or three live neighbors lives on to the next generation.
-                    </div>
+                    Any live cell with two or three live neighbors lives on to the next generation.
                 </div>
+                <div class="line"></div>
                 <div class="rule">
                     <div class="number">3</div>
-                    <div class="title">
-                        Any live cell with more than three live neighbors dies, as if by overcrowding.
-                    </div>
+                    Any live cell with more than three live neighbors dies, as if by overcrowding.
                 </div>
+                <div class="line"></div>
                 <div class="rule">
                     <div class="number">4</div>
-                    <div class="title">
-                        Any dead cell with exactly three live neighbors becomes a live cell, as if by reproduction.
-                    </div>
+                    Any dead cell with exactly three live neighbors becomes a live cell, as if by reproduction.
                 </div>
             </div>
         </div>
@@ -65,4 +77,5 @@
     </div>
     <script type="module" src="scripts/main.js"></script>
 </body>
+
 </html>
