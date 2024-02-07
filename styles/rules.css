@@ -1,0 +1,61 @@
+.rules {
+    position: fixed;
+    backdrop-filter: blur(20px);
+    z-index: 2;
+    inset: 0;
+}
+
+.rules.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.rules .alert {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-dim-light);
+    padding: 20px;
+    border-radius: 10px;
+    gap: 10px;
+}
+
+.rules .alert .rule {
+    font-size: 20px;
+}
+
+.rules .alert .close {
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    filter: invert();
+    top: 10px;
+    right: 10px;
+    padding: 0;
+    cursor: pointer;
+}
+
+.rules .alert .close:active {
+    opacity: 0.75;
+}
+
+.rules .alert .rule {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.rules .alert .rule .number {
+    min-width: 36px;
+    height: 36px;
+    border-radius: 18px;
+    background-color: var(--color-dim-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rules .alert .rule .title {}

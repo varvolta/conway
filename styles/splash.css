@@ -21,6 +21,7 @@
     opacity: 0.75;
     line-height: 110px;
     font-family: 'League Gothic';
+    filter: drop-shadow(0 0 100px var(--color-accent));
 }
 
 .splash .title.accent {
@@ -34,28 +35,13 @@
     justify-content: center;
     flex-direction: column;
     gap: 15px;
-    font-size: 23px;
-}
-
-.splash .start {
-    background-color: var(--color-accent);
-    border-radius: 4px;
-    border: none;
-    padding: 5px 10px;
-    transition: box-shadow 150ms ease-in-out,
-        opacity 150ms ease-in-out,
-        background-color 150ms ease-in-out;
-    min-width: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .splash .start:active {
     opacity: 0.75;
 }
 
-.splash .rules {
+.splash .button {
     background-color: transparent;
     border-radius: 4px;
     border: none;
@@ -67,12 +53,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    color: var(--color-text);
+    font-size: 20px;
+    cursor: pointer;
 }
 
-.splash .rules:hover {
+.splash .button:hover {
     background-color: var(--color-dim-light);
 }
 
-.splash .rules:active {
+.splash .button:active {
     opacity: 0.75;
 }

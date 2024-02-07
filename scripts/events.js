@@ -10,9 +10,11 @@ const changeImageInside = (parent, name) => {
 }
 
 const splash = document.getElementById('splash')
+const rules = document.getElementById('rules')
 const canvases = document.getElementById('canvases')
 const buttonStart = document.getElementById('button-start')
 const buttonRules = document.getElementById('button-rules')
+const buttonCloseRules = document.getElementById('button-close-rules')
 const buttonPlayPause = document.getElementById('button-play-pause')
 const buttonNext = document.getElementById('button-next')
 const buttonRestart = document.getElementById('button-restart')
@@ -49,4 +51,12 @@ buttonRestart.addEventListener('click', () => {
     buttonPlayPause
     canvases.style.border = '2px solid var(--color-secondary)'
     canvases.style.boxShadow = '0 0 20px var(--color-secondary-shadow)'
+})
+
+buttonRules.addEventListener('click', () => {
+    rules.classList.remove('hidden')
+})
+
+buttonCloseRules.addEventListener('click', () => {
+    rules.classList.add('hidden')
 })

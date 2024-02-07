@@ -25,10 +25,43 @@
             <div class="title">GAME</div>
             <div class="title">OF LIFE</div>
             <div class="menu">
-                <div id="button-start" class="start">Start</div>
-                <div id="button-rules" class="rules">Rules</div>
+                <button id="button-start" class="button">Start</button>
+                <button id="button-rules" class="button">Rules</button>
+                <button id="button-rules" class="button">About</button>
             </div>
         </div>
+        <div id="rules" class="rules hidden">
+            <div class="alert">
+                <button id="button-close-rules" class="close">
+                    <img width="20" height="20" class="svg" src="assets/icons/close.svg" alt="close rules"/>
+                </button>
+                <div class="rule">
+                    <div class="number">1</div>
+                    <div class="title">
+                        Any live cell with fewer than two live neighbors dies, as if caused by under-population.
+                    </div>
+                </div>
+                <div class="rule">
+                    <div class="number">2</div>
+                    <div class="title">
+                        Any live cell with two or three live neighbors lives on to the next generation.
+                    </div>
+                </div>
+                <div class="rule">
+                    <div class="number">3</div>
+                    <div class="title">
+                        Any live cell with more than three live neighbors dies, as if by overcrowding.
+                    </div>
+                </div>
+                <div class="rule">
+                    <div class="number">4</div>
+                    <div class="title">
+                        Any dead cell with exactly three live neighbors becomes a live cell, as if by reproduction.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="notifications"></div>
     </div>
     <script type="module" src="scripts/main.js"></script>
 </body>

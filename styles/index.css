@@ -3,6 +3,7 @@
 @import url(canvases.css);
 @import url(controls.css);
 @import url(splash.css);
+@import url(rules.css);
 
 html,
 body {
@@ -24,6 +25,7 @@ body {
     flex-direction: column;
     padding: 20px;
     gap: 20px;
+    color: var(--color-text);
 }
 
 * {

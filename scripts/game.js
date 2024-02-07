@@ -27,7 +27,7 @@ export const setCells = (callback) => {
     cells = callback?.(cells)
 }
 
-const canvases = document.querySelector('.canvases')
+const canvases = document.getElementById('canvases')
 
 const canvasWireframe = createFilledCanvas(canvases)
 const contextWireframe = canvasWireframe.getContext('2d')
@@ -46,8 +46,8 @@ const drawWireframe = () => {
     contextWireframe.clearRect(0, 0, camera.width, camera.height)
 
     const { x, y, width, height } = camera
-    const columns = Math.ceil(width / CELL_SIZE) + CELL_OUTRENDER_COUNT
-    const rows = Math.ceil(height / CELL_SIZE) + CELL_OUTRENDER_COUNT
+    const columnsCount = Math.ceil(width / CELL_SIZE) + CELL_OUTRENDER_COUNT
+    const rowsCount = Math.ceil(height / CELL_SIZE) + CELL_OUTRENDER_COUNT
     const diffX = x % CELL_SIZE
     const diffY = y % CELL_SIZE
 
@@ -56,14 +56,19 @@ const drawWireframe = () => {
 
     contextWireframe.beginPath()
 
-    for (let column = 0; column < columns; column++) {
-        contextWireframe.moveTo(diffX + column * CELL_SIZE, 0)
-        contextWireframe.lineTo(diffX + column * CELL_SIZE, height)
+    for (let column = 0; column < columnsCount; column++) {
+        const moveToX = diffX + column * CELL_SIZE
+        // const index = Math.ceil(((x + width) * column) / CELL_SIZE)
+        // console.log(index)
+        contextWireframe.moveTo(moveToX, 0)
+        contextWireframe.lineTo(moveToX, height)
     }
+    console.log(123)
 
-    for (let row = 0; row < rows; row++) {
-        contextWireframe.moveTo(0, diffY + row * CELL_SIZE)
-        contextWireframe.lineTo(width, diffY + row * CELL_SIZE)
+    for (let row = 0; row < rowsCount; row++) {
+        const moveToY = diffY + row * CELL_SIZE
+        contextWireframe.moveTo(0, moveToY)
+        contextWireframe.lineTo(width, moveToY)
     }
 
     contextWireframe.stroke()
