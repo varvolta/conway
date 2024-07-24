@@ -1,6 +1,7 @@
 const resize = (parent, canvas, context) => {
     const { offsetWidth, offsetHeight } = parent
-    const scale = window.devicePixelRatio // Change to 1 on retina screens to see blurry canvas.
+    // Change to 1 on retina screens to see blurry canvas.
+    const scale = window.devicePixelRatio
     canvas.width = Math.floor(offsetWidth * scale)
     canvas.height = Math.floor(offsetHeight * scale)
     context.scale(scale, scale)
